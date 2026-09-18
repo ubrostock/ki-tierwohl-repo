@@ -45,8 +45,8 @@ def load_seek_config_defaults!
   Seek::Config.default :community_news_enabled,false
   Seek::Config.default :community_news_feed_urls,''
   Seek::Config.default :community_news_number_of_entries,10
-  Seek::Config.default :home_description, 'You can configure the text that goes here within the Admin pages: Site Configuration->Home page settings.'
-  Seek::Config.default :home_description_position, 'side'
+  Seek::Config.default :home_description, '[Repository Name] is a metadata repository developed as part of the German research project KI-TIERWOHL, providing structured access to metadata from datasets in the fields of laboratory and farm animal research. It enables researchers to discover, evaluate, and reference relevant datasets across institutions and disciplines. Developed in Germany and designed for international use, [Repository Name] supports FAIR data principles to foster transparency and reproducibility in animal science research.'
+  Seek::Config.default :home_description_position, 'middle'
   Seek::Config.default :tagline_prefix, 'Find, share and exchange <b>Data</b>, <b>Models</b> and <b>Processes</b> within the'
   Seek::Config.default :auth_lookup_enabled,true
   Seek::Config.default :external_search_enabled, true
@@ -113,18 +113,18 @@ def load_seek_config_defaults!
 #time in minutes that the feeds on the front page are cached for
   Seek::Config.default :home_feeds_cache_timeout,30
 # Branding
-  Seek::Config.default :instance_name,'NFDI4Health'
-  Seek::Config.default :instance_link,'https://www.nfdi4health.de/'
+  Seek::Config.default :instance_name,'KI-TIERWOHL'
+  Seek::Config.default :instance_link,'https://ki-tierwohl.de/'
 
-  Seek::Config.default :instance_admins_name,"NFDI4Health"
-  Seek::Config.default :instance_admins_link,"https://www.nfdi4health.de/"
+  Seek::Config.default :instance_admins_name,"KI-TIERWOHL"
+  Seek::Config.default :instance_admins_link,"https://ki-tierwohl.de/"
 
   Seek::Config.default :header_image_enabled,true
-  Seek::Config.default :header_image_title, "NFDI4Health LAP"
-  Seek::Config.default :header_image_link,"https://www.nfdi4health.de/"
+  Seek::Config.default :header_image_title, "KI-TIERWOHL"
+  Seek::Config.default :header_image_link,"https://ki-tierwohl.ub.uni-rostock.de"
   Seek::Config.default :copyright_addendum_enabled,false
   Seek::Config.default :copyright_addendum_content,'Additions copyright ...'
-  Seek::Config.default :issue_tracker, 'https://github.com/nfdi4health/seek/issues'
+  Seek::Config.default :issue_tracker, 'https://github.com/ubrostock/ki-tierwohl-repo/issues'
 
   Seek::Config.fixed :application_name,"FAIRDOM-SEEK"
 
