@@ -13,7 +13,7 @@ RUN apt-get update -qq && \
 		libcurl4-gnutls-dev libmagick++-dev libmariadb-dev libpq-dev libreadline-dev \
 		libreoffice libsqlite3-dev libssl-dev libxml++2.6-dev \
 		libxslt1-dev libyaml-dev locales nginx nodejs openjdk-21-jdk-headless \
-		python3-dev python3-setuptools python3-pip \
+		python3-dev python3-setuptools python3-pip python3-venv \
 		poppler-utils postgresql-client shared-mime-info sqlite3 links inetutils-telnet vim-tiny zip && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
@@ -45,9 +45,10 @@ USER www-data
 RUN touch config/using-docker #allows us to see within SEEK we are running in a container
 
 # Python dependencies from requirements.txt
+RUN python3 -m venv /var/www/.local/
 ENV PATH="/var/www/.local/bin:$PATH"
 RUN python3 -m pip install --upgrade pip
-RUN python3 -m pip install setuptools==58
+RUN python3 -m pip install --upgrade setuptools
 RUN python3 -m pip install -r requirements.txt
 
 # SQLite Database (for asset compilation)
