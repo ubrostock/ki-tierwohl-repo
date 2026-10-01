@@ -3,10 +3,10 @@ name: Build Docker Image
 on:
   pull_request:
     branches:
-      - main
+      - ki-tierwohl
   push:
     branches:
-      - main
+      - ki-tierwohl
   release:
     types:
       - published
